@@ -60,8 +60,8 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
   return (
     <g>
       <text x={lineX} y={y} fill="#333" textAnchor={textAnchor} dominantBaseline="central">
-        <tspan x={lineX} dy="0">{percent}</tspan>
-        <tspan x={lineX} dy="1.2em" fontSize="0.8em" fill="#666">{percent}</tspan>
+        <tspan x={lineX} dy="0">{data[index].name}</tspan>
+        <tspan x={lineX} dy="1.2em" fontSize="0.8em" fill="#666">{data[index].range}</tspan>
       </text>
       <path d={`M${x},${y}L${lineX},${y}`} stroke={COLORS[index % COLORS.length]} fill="none" />
     </g>
