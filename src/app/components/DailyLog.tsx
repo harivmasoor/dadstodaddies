@@ -2,6 +2,12 @@
 
 import { useState } from 'react'
 
+interface Entry {
+  date: string;
+  weight: number;
+  notes: string;
+}
+
 const WeightMeter = ({ currentWeight }: { currentWeight: number }) => {
   const totalHeight = 340
   const width = 60
