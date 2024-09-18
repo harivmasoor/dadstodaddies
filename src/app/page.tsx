@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
       <Header />
-      <h1 className="text-5xl font-bold mb-8 text-center">Dads2Daddies</h1>
+      <h1 className="text-5xl font-bold mb-8 text-center">DadstoDaddies</h1>
       <p className="text-xl mb-12 text-center">Empowering fathers to reclaim their health, one step at a time.</p>
       <div className="grid md:grid-cols-2 gap-8">
         <BodyFatCalculator />

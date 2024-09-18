@@ -7,7 +7,7 @@ export default function Story() {
       <h1 className="text-4xl font-bold mb-8">My Story</h1>
       <div className="prose lg:prose-xl">
         <p>
-          As a new father, I found myself struggling with weight gain and the challenges of balancing parenthood with personal health. This journey inspired me to create Dads To Daddies, a supportive community where fathers can come together to share experiences, motivate each other, and work towards healthier lifestyles.
+          As a new father, I found myself struggling with weight gain and the challenges of balancing parenthood with personal health. This journey inspired me to create Dads ToDaddies, a supportive community where fathers can come together to share experiences, motivate each other, and work towards healthier lifestyles.
         </p>
         <p>
           Our mission is simple: to empower dads to prioritize their health without sacrificing their role as fathers. We believe that by taking care of ourselves, we become better parents and role models for our children.
