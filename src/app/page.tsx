@@ -8,11 +8,9 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
       <Header />
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-8 text-center flex justify-center items-center">
-        DadstoDaddies
-        <Image src="/drool.png" alt="Drool" width={40} height={40} className="ml-2" />
-      </h1>
-      <p className="text-lg md:text-xl mb-8 md:mb-12 text-center">Empowering fathers to reclaim their health, one step at a time.</p>
+      <p className="text-lg md:text-xl mb-8 md:mb-12 text-center font-bold">
+        Empowering fathers to reclaim their health, one step at a time.
+      </p>
       <div className="grid md:grid-cols-2 gap-8">
         <BodyFatCalculator />
         <Chart />
