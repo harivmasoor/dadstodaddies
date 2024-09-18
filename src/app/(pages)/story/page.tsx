@@ -10,7 +10,7 @@ export default function Story() {
       </h1>
       <div className="prose lg:prose-xl">
         <p>
-          As a new father, I found myself struggling with weight gain and the challenges of balancing parenthood with personal health. This journey inspired me to create Dads ToDaddies
+          As a new father, I found myself struggling with weight gain and the challenges of balancing parenthood with personal health. This journey inspired me to create Dads To Daddies
           <Image src="/drool.png" alt="Drool" width={20} height={20} className="inline ml-1" />
           , a supportive community where fathers can come together to share experiences, motivate each other, and work towards healthier lifestyles.
         </p>
