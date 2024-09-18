@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <header className="flex justify-between items-center py-4 mb-8">
-      <Link href="/" className="text-2xl font-bold">D2D</Link>
+      <Link href="/" className="text-2xl font-bold">Dads To Daddies</Link>
       <nav>
         <ul className="flex space-x-4">
           <li><Link href="/" className="hover:underline">Home</Link></li>
