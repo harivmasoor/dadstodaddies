@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const WeightMeter = ({ currentWeight }) => {
+const WeightMeter = ({ currentWeight }: { currentWeight: number }) => {
   const totalHeight = 340
   const width = 60
   const nonFatWeight = 120
@@ -14,7 +14,7 @@ const WeightMeter = ({ currentWeight }) => {
   const maxWeight = 176  // Set this to your starting weight
   const minWeight = nonFatWeight
 
-  const getY = (weight) => totalHeight - 20 - ((weight - minWeight) / (maxWeight - minWeight)) * (totalHeight - 40)
+  const getY = (weight: number) => totalHeight - 20 - ((weight - minWeight) / (maxWeight - minWeight)) * (totalHeight - 40)
 
   return (
     <svg width={width + 100} height={totalHeight} className="mx-auto">
@@ -44,9 +44,7 @@ const WeightMeter = ({ currentWeight }) => {
 }
 
 export default function DailyLog() {
-  const [entries, setEntries] = useState([
-    { date: '2024-09-17', weight: 176, notes: 'Starting my journey!' },
-  ])
+  const [entries] = useState<Entry[]>([]);
 
   return (
     <div className="space-y-6">

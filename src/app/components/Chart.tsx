@@ -40,8 +40,15 @@ const renderActiveShape = (props: any) => {
   )
 }
 
-const renderCustomizedLabel = (props: any) => {
-  const { cx, cy, midAngle, innerRadius, outerRadius, name, range, index } = props;
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }: {
+  cx: number;
+  cy: number;
+  midAngle: number;
+  innerRadius: number;
+  outerRadius: number;
+  percent: number;
+  index: number;
+}) => {
   const RADIAN = Math.PI / 180;
   const radius = outerRadius + 30;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
@@ -53,8 +60,8 @@ const renderCustomizedLabel = (props: any) => {
   return (
     <g>
       <text x={lineX} y={y} fill="#333" textAnchor={textAnchor} dominantBaseline="central">
-        <tspan x={lineX} dy="0">{name}</tspan>
-        <tspan x={lineX} dy="1.2em" fontSize="0.8em" fill="#666">{range}</tspan>
+        <tspan x={lineX} dy="0">{percent}</tspan>
+        <tspan x={lineX} dy="1.2em" fontSize="0.8em" fill="#666">{percent}</tspan>
       </text>
       <path d={`M${x},${y}L${lineX},${y}`} stroke={COLORS[index % COLORS.length]} fill="none" />
     </g>
