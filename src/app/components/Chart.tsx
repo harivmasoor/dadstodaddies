@@ -81,9 +81,9 @@ export default function Chart() {
   }
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md">
-      <h2 className="text-3xl font-semibold mb-6">Body Fat Categories</h2>
-      <div className="h-[400px] w-full">
+    <div className="bg-white p-4 md:p-8 rounded-lg shadow-md">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6">Body Fat Categories</h2>
+      <div className="h-[300px] md:h-[400px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -109,8 +109,8 @@ export default function Chart() {
         </ResponsiveContainer>
       </div>
       {message && (
-        <div className="mt-4 p-4 bg-gray-100 rounded-md text-center">
-          <p className="text-lg font-semibold">{message}</p>
+        <div className="mt-4 p-3 md:p-4 bg-gray-100 rounded-md text-center">
+          <p className="text-base md:text-lg font-semibold">{message}</p>
         </div>
       )}
     </div>

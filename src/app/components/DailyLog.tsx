@@ -24,30 +24,30 @@ const DailyLog = () => {
   }
 
   const CustomLegend = () => (
-    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '0.9em' }}>
-      <div style={{ marginRight: '15px' }}><span style={{ color: 'green', marginRight: '5px' }}>●</span>Non-fat (120 lbs)</div>
-      <div style={{ marginRight: '15px' }}><span style={{ color: 'yellow', marginRight: '5px' }}>●</span>NARP (138 lbs)</div>
-      <div style={{ marginRight: '15px' }}><span style={{ color: 'orange', marginRight: '5px' }}>●</span>Chubby (144 lbs)</div>
-      <div><span style={{ color: 'red', marginRight: '5px' }}>●</span>Obese (157 lbs)</div>
+    <div className="flex flex-wrap justify-center mb-4 text-xs sm:text-sm">
+      <div className="mr-2 sm:mr-4 mb-1"><span className="text-green-500 mr-1">●</span>Non-fat (120 lbs)</div>
+      <div className="mr-2 sm:mr-4 mb-1"><span className="text-yellow-500 mr-1">●</span>NARP (138 lbs)</div>
+      <div className="mr-2 sm:mr-4 mb-1"><span className="text-orange-500 mr-1">●</span>Chubby (144 lbs)</div>
+      <div className="mb-1"><span className="text-red-500 mr-1">●</span>Obese (157 lbs)</div>
     </div>
   )
 
   return (
-    <div>
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-2">Latest Entry</h2>
-        <p>Date: {latestEntry.date}</p>
-        <p>Weight: {latestEntry.weight} lbs</p>
-        <p>Category: {getWeightCategory(latestEntry.weight)}</p>
+    <div className="p-4">
+      <div className="mb-6 sm:mb-8">
+        <h2 className="text-xl sm:text-2xl font-bold mb-2">Latest Entry</h2>
+        <p className="text-sm sm:text-base">Date: {latestEntry.date}</p>
+        <p className="text-sm sm:text-base">Weight: {latestEntry.weight} lbs</p>
+        <p className="text-sm sm:text-base">Category: {getWeightCategory(latestEntry.weight)}</p>
       </div>
 
       <CustomLegend />
 
-      <div style={{ width: '100%', height: 400, minWidth: 700 }}>
-        <ResponsiveContainer>
+      <div className="w-full h-[300px] sm:h-[400px] overflow-x-auto">
+        <ResponsiveContainer width="100%" height="100%">
           <BarChart data={entries} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
-            <XAxis dataKey="date" tick={{ fill: 'black' }} />
-            <YAxis domain={[120, 180]} tick={{ fill: 'black' }} />
+            <XAxis dataKey="date" tick={{ fill: 'black', fontSize: '0.75rem' }} />
+            <YAxis domain={[120, 180]} tick={{ fill: 'black', fontSize: '0.75rem' }} />
             <Tooltip contentStyle={{ backgroundColor: 'white', border: '1px solid #ccc' }} />
             <CartesianGrid strokeDasharray="3 3" />
             <Bar dataKey="weight" fill="#8884d8" />
