@@ -1,72 +1,64 @@
 'use client'
 
-import { useState } from 'react'
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, ReferenceLine } from 'recharts'
 
 interface Entry {
   date: string;
   weight: number;
-  notes: string;
 }
 
-const WeightMeter = ({ currentWeight }: { currentWeight: number }) => {
-  const totalHeight = 340
-  const width = 60
-  const nonFatWeight = 120
-  const goals = {
-    obesity: 157,
-    chubby: 144,
-    narp: 138
+const entries: Entry[] = [
+  { date: '2024-09-18', weight: 176 }
+  // Add more entries here as you progress
+]
+
+const DailyLog = () => {
+  const latestEntry = entries[entries.length - 1]
+
+  const getWeightCategory = (weight: number) => {
+    if (weight > 157) return 'Obese'
+    if (weight > 144) return 'Chubby'
+    if (weight > 138) return 'NARP'
+    return 'Fit'
   }
-  const maxWeight = 176  // Set this to your starting weight
-  const minWeight = nonFatWeight
 
-  const getY = (weight: number) => totalHeight - 20 - ((weight - minWeight) / (maxWeight - minWeight)) * (totalHeight - 40)
-
-  return (
-    <svg width={width + 100} height={totalHeight} className="mx-auto">
-      {/* Weight bar */}
-      <rect x="0" y={getY(currentWeight)} width={width} height={getY(goals.obesity) - getY(currentWeight)} fill="#FF0000" />
-      <rect x="0" y={getY(goals.obesity)} width={width} height={getY(goals.chubby) - getY(goals.obesity)} fill="#FFFF00" />
-      <rect x="0" y={getY(goals.chubby)} width={width} height={getY(goals.narp) - getY(goals.chubby)} fill="#00FF00" />
-      <rect x="0" y={getY(goals.narp)} width={width} height={getY(nonFatWeight) - getY(goals.narp)} fill="#808080" />
-
-      {/* Weight markers */}
-      <line x1="0" y1={getY(currentWeight)} x2={width} y2={getY(currentWeight)} stroke="black" strokeWidth="2" />
-      <text x={width + 5} y={getY(currentWeight)} dominantBaseline="middle" fontSize="12">Current: {currentWeight}lbs</text>
-
-      <line x1="0" y1={getY(goals.obesity)} x2={width} y2={getY(goals.obesity)} stroke="black" strokeDasharray="5,5" />
-      <text x={width + 5} y={getY(goals.obesity)} dominantBaseline="middle" fontSize="12">Obesity: {goals.obesity}lbs</text>
-
-      <line x1="0" y1={getY(goals.chubby)} x2={width} y2={getY(goals.chubby)} stroke="black" strokeDasharray="5,5" />
-      <text x={width + 5} y={getY(goals.chubby)} dominantBaseline="middle" fontSize="12">Chubby: {goals.chubby}lbs</text>
-
-      <line x1="0" y1={getY(goals.narp)} x2={width} y2={getY(goals.narp)} stroke="black" strokeDasharray="5,5" />
-      <text x={width + 5} y={getY(goals.narp)} dominantBaseline="middle" fontSize="12">NARP: {goals.narp}lbs</text>
-
-      <line x1="0" y1={getY(nonFatWeight)} x2={width} y2={getY(nonFatWeight)} stroke="black" strokeDasharray="5,5" />
-      <text x={width + 5} y={getY(nonFatWeight)} dominantBaseline="middle" fontSize="12">Non-fat: {nonFatWeight}lbs</text>
-    </svg>
+  const CustomLegend = () => (
+    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px', fontSize: '0.9em' }}>
+      <div style={{ marginRight: '15px' }}><span style={{ color: 'green', marginRight: '5px' }}>●</span>Non-fat (120 lbs)</div>
+      <div style={{ marginRight: '15px' }}><span style={{ color: 'yellow', marginRight: '5px' }}>●</span>NARP (138 lbs)</div>
+      <div style={{ marginRight: '15px' }}><span style={{ color: 'orange', marginRight: '5px' }}>●</span>Chubby (144 lbs)</div>
+      <div><span style={{ color: 'red', marginRight: '5px' }}>●</span>Obese (157 lbs)</div>
+    </div>
   )
-}
-
-export default function DailyLog() {
-  const [entries] = useState<Entry[]>([]);
 
   return (
-    <div className="space-y-6">
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-semibold mb-4">Weight Progress Meters</h3>
-        <div className="flex flex-wrap justify-center gap-4">
-          {entries.map((entry, index) => (
-            <div key={index} className="text-center">
-              <p className="font-semibold">{entry.date}</p>
-              <WeightMeter currentWeight={entry.weight} />
-              <p className="mt-2">Weight: {entry.weight} lbs</p>
-              <p className="text-sm text-gray-600">{entry.notes}</p>
-            </div>
-          ))}
-        </div>
+    <div>
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-2">Latest Entry</h2>
+        <p>Date: {latestEntry.date}</p>
+        <p>Weight: {latestEntry.weight} lbs</p>
+        <p>Category: {getWeightCategory(latestEntry.weight)}</p>
+      </div>
+
+      <CustomLegend />
+
+      <div style={{ width: '100%', height: 400, minWidth: 700 }}>
+        <ResponsiveContainer>
+          <BarChart data={entries} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
+            <XAxis dataKey="date" tick={{ fill: 'black' }} />
+            <YAxis domain={[120, 180]} tick={{ fill: 'black' }} />
+            <Tooltip contentStyle={{ backgroundColor: 'white', border: '1px solid #ccc' }} />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Bar dataKey="weight" fill="#8884d8" />
+            <ReferenceLine y={120} stroke="green" strokeWidth={2} />
+            <ReferenceLine y={138} stroke="yellow" strokeWidth={2} />
+            <ReferenceLine y={144} stroke="orange" strokeWidth={2} />
+            <ReferenceLine y={157} stroke="red" strokeWidth={2} />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </div>
   )
 }
+
+export default DailyLog
