@@ -7,7 +7,6 @@ export default function Story() {
       <Header />
       <h1 className="text-4xl font-bold mb-8 flex items-center justify-center">
         My Story
-        <Image src="/drool.png" alt="Drool" width={40} height={40} className="ml-2" />
       </h1>
       <div className="prose lg:prose-xl">
         <p>
