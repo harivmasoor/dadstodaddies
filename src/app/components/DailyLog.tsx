@@ -9,7 +9,7 @@ interface Entry {
 
 const entries: Entry[] = [
   { date: '2024-09-17', weight: 176.6 },
-  { date: '2024-09-17', weight: 176.2 }
+  { date: '2024-09-18', weight: 176.2 }
   // Add more entries here as you progress
 ]
 
