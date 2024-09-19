@@ -17,6 +17,17 @@ export default function GalleryPage() {
         <p className="text-sm text-gray-500">September 18, 2023</p>
         <p className="text-lg font-semibold">Wise words from Schwarzenegger-Sama</p>
       </div>
+      <div className="bg-white p-4 rounded-lg shadow-md">
+        <Image 
+          src="/littlegymnast.png" 
+          alt="No Mountain High Enough" 
+          width={600} 
+          height={400} 
+          className="w-full h-auto object-cover mb-2 rounded" 
+        />
+        <p className="text-sm text-gray-500">September 19, 2023</p>
+        <p className="text-lg font-semibold">No Mountain High Enough</p>
+      </div>
     </div>
   )
 }
