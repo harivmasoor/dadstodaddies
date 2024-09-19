@@ -31,14 +31,14 @@ export default function BodyFatCalculator() {
       <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6">Body Fat Calculator</h2>
       <input
         type="number"
-        placeholder="Total Weight (kg)"
+        placeholder="Total Weight"
         value={weight}
         onChange={(e) => setWeight(e.target.value)}
         className="input input-bordered w-full mb-3 sm:mb-4 p-2 rounded text-sm sm:text-base"
       />
       <input
         type="number"
-        placeholder="Non-Fat Weight (kg)"
+        placeholder="Non-Fat Weight"
         value={nonFatWeight}
         onChange={(e) => setNonFatWeight(e.target.value)}
         className="input input-bordered w-full mb-3 sm:mb-4 p-2 rounded text-sm sm:text-base"
