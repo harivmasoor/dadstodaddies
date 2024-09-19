@@ -34,9 +34,13 @@ export default function Story() {
         <p className="text-xl mb-6">
           This journey isn't just about losing weight or getting fit. It's about reclaiming our vitality, setting a positive example, and being the best fathers we can be.
         </p>
-        <p className="text-2xl font-bold text-yellow-300">
+        <p className="text-2xl font-bold text-yellow-300 mb-6">
           Together, we can build healthier families and stronger communities, one dad at a time.
         </p>
+        <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="https://discord.gg/BK4zkTEN" className="btn btn-discord w-full sm:w-auto text-center">Join our Discord</a>
+          <a href="https://x.com/i/communities/1836602551300735382" className="btn btn-primary w-full sm:w-auto text-center">Join X Community</a>
+        </div>
       </div>
     </div>
   )
