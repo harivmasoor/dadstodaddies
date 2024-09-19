@@ -14,7 +14,7 @@ export default function GalleryPage() {
           height={400} 
           className="w-full h-auto object-cover mb-2 rounded" 
         />
-        <p className="text-sm text-gray-500">September 18, 2023</p>
+        <p className="text-sm text-gray-500">September 18, 2024</p>
         <p className="text-lg font-semibold">Wise words from Schwarzenegger-Sama</p>
       </div>
       <div className="bg-white p-4 rounded-lg shadow-md">
@@ -25,7 +25,7 @@ export default function GalleryPage() {
           height={400} 
           className="w-full h-auto object-cover mb-2 rounded" 
         />
-        <p className="text-sm text-gray-500">September 19, 2023</p>
+        <p className="text-sm text-gray-500">September 19, 2024</p>
         <p className="text-lg font-semibold">No Mountain High Enough</p>
       </div>
     </div>
