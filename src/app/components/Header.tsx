@@ -12,6 +12,7 @@ export default function Header() {
         <ul className="flex space-x-4">
           <li><Link href="/" className="hover:underline">Home</Link></li>
           <li><Link href="/story" className="hover:underline">Story</Link></li>
+          <li><Link href="/nicos-story" className="hover:underline">Nico's Story</Link></li>
           <li><Link href="/log" className="hover:underline">Log</Link></li>
           <li><Link href="/gallery" className="hover:underline">Gallery</Link></li>
         </ul>
