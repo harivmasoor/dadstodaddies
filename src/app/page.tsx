@@ -17,6 +17,7 @@ export default function Home() {
       </div>
       <div className="mt-8 md:mt-12 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <Link href="/story" className="btn btn-primary w-full sm:w-auto text-center">My Story</Link>
+        <Link href="/nicos-story" className="btn btn-primary w-full sm:w-auto text-center">Nico's Story</Link>
         <Link href="/log" className="btn btn-secondary w-full sm:w-auto text-center">Daily Log</Link>
       </div>
       <div className="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
