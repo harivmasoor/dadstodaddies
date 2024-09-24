@@ -2,7 +2,7 @@ import Header from '../../components/Header'
 
 export default function Story() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-3xl">
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
       <Header />
       <h1 className="text-5xl font-bold mb-12 text-center text-blue-800">My Journey: From Athlete to Dungeon Dweller (A.K.A a SWE) </h1>
       
