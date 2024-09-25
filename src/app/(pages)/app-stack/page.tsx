@@ -17,6 +17,8 @@ const appStack: AppItem[] = [
   { id: 4, name: "Spotify", imageUrl: "/spotify.png", url: "https://www.spotify.com/", blurb: "Music streaming for workout motivation" },
   { id: 5, name: "X", imageUrl: "/x.png", url: "https://twitter.com/", blurb: "Social media for fitness community engagement" },
   { id: 6, name: "Fit Radio", imageUrl: "/fit-radio.png", url: "https://www.fitradio.com/", blurb: "Workout music app" },
+  { id: 7, name: "Apple Health", imageUrl: "/apple-health.png", url: "https://www.apple.com/health/", blurb: "Centralized health data hub connecting various health and fitness apps" },
+  { id: 8, name: "Renpho", imageUrl: "/renpho.png", url: "https://renpho.com/", blurb: "Smart scale for weight and body composition tracking" },
 ]
 
 function AppStack() {
