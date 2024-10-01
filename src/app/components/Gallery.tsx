@@ -11,6 +11,7 @@ const galleryItems: GalleryItem[] = [
   { id: 1, imageUrl: '/arnold.png', date: '2024-09-18', caption: 'Wise words from Schwarzenegger-Sama' },
   { id: 2, imageUrl: '/littlegymnast.png', date: '2024-09-19', caption: 'No Mountain High Enough' },
   { id: 3, imageUrl: '/goatdog.png', date: '2024-09-20', caption: 'GOATED Running Buddy' },
+  { id: 4, imageUrl: '/onefoot.png', date: '2024-10-1', caption: 'One Foot At A Time' },
   // Add more items as needed
 ]
 
