@@ -21,9 +21,9 @@ const workoutData: WeekData[] = [
   {
     week: 1,
     date: 'Sep 24, 2024',
-    pullups: { exercise: 'Slow dead-hang pull-ups', nico: 13 },
+    pullups: { exercise: 'Pull-ups', nico: 13 },
     squats: { exercise: 'Squat', nico: 8, weight: 225 },
-    dips: { exercise: 'Dips (body weight)', nico: 28 },
+    dips: { exercise: 'Dips', nico: 28 },
   },
   {
     week: 2,
