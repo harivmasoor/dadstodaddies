@@ -15,7 +15,9 @@ const entries: Entry[] = [
   { date: '2024-09-25', weight: 175.2 },
   { date: '2024-09-27', weight: 175.6 },
   { date: '2024-10-01', weight: 175.2 },
-  { date: '2024-10-02', weight: 176 }
+  { date: '2024-10-02', weight: 176 },
+  { date: '2024-10-08', weight: 175.4 },
+
 
   // Add more entries here as you progress
 ]
