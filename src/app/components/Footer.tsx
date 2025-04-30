@@ -8,9 +8,6 @@ export default function Footer() {
         <div className="mt-2 flex justify-center space-x-4">
           <Link href="https://www.strava.com/athletes/59375532" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Strava</Link>
           <Link href="https://www.linkedin.com/in/harimasoor/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</Link>
-          <Link href="https://x.com/notaihari" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">X</Link>
-          <Link href="https://x.com/i/communities/1836602551300735382" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">X Community</Link>
-          <Link href="https://discord.gg/BK4zkTEN" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Discord</Link>
         </div>
       </div>
     </footer>
